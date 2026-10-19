@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: ahut-night-signin
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: waitress-serve --listen=0.0.0.0:$PORT --threads=8 --connection-limit=32 --channel-timeout=120 --max-request-body-size=2048 app:application
+    healthCheckPath: /api/health

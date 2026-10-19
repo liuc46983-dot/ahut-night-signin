@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#183e35"><meta name="description" content="AHUT 晚寝手动签到工具"><title>晚安 · AHUT 晚寝签到</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="晚安首页"><span class="brand-icon">☾</span><span>晚安 <small>AHUT</small></span></a><span class="status"><i></i>手动签到</span></header>
+<main>
+<section class="intro"><div class="eyebrow">A LITTLE ROUTINE, A BETTER NIGHT</div><h1>今天的最后一件小事。<br><span>签到，然后好好休息。</span></h1><p>安徽工业大学晚寝签到工具<br>用自己的账号，完成今晚的签到。</p><div class="night-art" aria-hidden="true"><span class="moon"></span><span class="star one">✦</span><span class="star two">✧</span><span class="star three">·</span><div class="building"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><span class="ground"></span></div><div class="intro-note"><span>01 / 每晚的小习惯</span><span>GOOD NIGHT, CAMPUS.</span></div></section>
+<section class="card" aria-labelledby="form-title"><div class="card-head"><span class="tag">今晚，别忘了</span><span id="clock">北京时间 --:--</span></div><h2 id="form-title">晚寝签到</h2><p class="card-sub">填写考勤账号，手动发起一次签到。</p>
+<form id="signin-form"><label for="student">学号</label><input id="student" name="student_id" inputmode="numeric" autocomplete="username" pattern="[0-9]{5,20}" minlength="5" maxlength="20" required placeholder="请输入你的学号">
+<label for="password">考勤密码</label><div class="password-wrap"><input id="password" name="password" type="password" autocomplete="off" required maxlength="128" placeholder="请输入考勤系统密码"><button id="toggle-password" type="button" aria-pressed="false">显示</button></div><p class="field-hint">使用学校考勤系统的密码。</p>
+<label class="consent"><input id="consent" type="checkbox" required><span>我确认使用本人账号，并已满足学校的签到要求。</span></label>
+<button class="submit" id="submit" type="submit"><span id="button-label">开始签到</span><span aria-hidden="true">↗</span></button>
+<div id="result" class="result" role="status" aria-live="polite" hidden></div></form>
+<div class="privacy"><span aria-hidden="true">◇</span><p>密码仅用于本次请求，不写入文件或数据库。<br>本站为第三方工具，非学校官方服务。</p></div></section>
+<section class="details"><article><span class="detail-number">01</span><h3>打开就能用</h3><p>适配手机浏览器，无需安装 App。</p></article><article><span class="detail-number">02</span><h3>你来决定何时签到</h3><p>每次手动提交，不设置后台自动签到。</p></article><article><span class="detail-number">03</span><h3>以学校记录为准</h3><p>返回结果后，请到学校系统确认记录。</p></article></section>
+<aside class="notice"><strong>使用前了解一下</strong><p>学校决定实际开放时间。本工具在北京时间 21:20 前不提交。当前脚本使用学校返回的宿舍坐标构造签到参数，不读取手机 GPS。请按学校要求使用。</p></aside>
+</main><footer><span>晚安 · AHUT</span><span>愿每一个普通的夜晚，都安稳。</span><a href="https://github.com/UnthinkingBrain/-_ahut_wqqd" target="_blank" rel="noreferrer">原项目 ↗</a></footer>
+</body></html>
